@@ -6,11 +6,11 @@ node('ci-node')
         checkout scm
         GITCOMMIT_HASH = sh(script:"git log -n 1 --pretty=format:'%H'", returnStdout: true)
     }
- // stage('Install Node.js and npm')
- //   {
- //   sh 'curl -sL https://deb.nodesource.com/setup_16.x | bash -'
- //   sh 'sudo apt-get install -y nodejs'
- //   }
+  stage('Install Node.js and npm')
+    {
+        sh 'curl -sL https://deb.nodesource.com/setup_16.x | bash -'
+        sh 'sudo apt-get install -y nodejs'
+    }
   stage('Build')
     {
         sh 'npm install'
