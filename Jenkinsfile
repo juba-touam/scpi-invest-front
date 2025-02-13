@@ -9,7 +9,11 @@ node('ci-node')
   stage('Install Node.js and npm')
     {
         sh 'curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -'
+        sh 'sudo apt-get update'
         sh 'sudo apt-get install -y nodejs'
+        sh 'sudo apt-get install -y npm'
+        sh 'node -v' //je verifie si node est bien installé
+        sh 'npm -v' //je verifie si npm est bien installé
     }
   stage('Build')
     {
