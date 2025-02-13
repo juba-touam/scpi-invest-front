@@ -1,4 +1,4 @@
-node('ci-node')
+node('Built-In Node')
 {
   def GITCOMMIT_HASH = ""
   stage('Checkout')
