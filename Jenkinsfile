@@ -8,7 +8,7 @@ node('ci-node')
     }
   stage('Install Node.js and npm')
     {
-    sh 'curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -'
+    sh 'curl -sL https://deb.nodesource.com/setup_16.x | bash -'
     sh 'sudo apt-get install -y nodejs'
     }
   stage('Build')
